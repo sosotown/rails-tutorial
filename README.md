@@ -1,2 +1,1 @@
-# rails-tutorial
-# rails-tutorial
+This is my first rails tutorial on github.
