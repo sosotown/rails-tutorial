@@ -12,12 +12,21 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
+<<<<<<< HEAD
 topdir = /Users/sohatakeyama/.rbenv/versions/2.3.1/include/ruby-2.3.0
 hdrdir = $(topdir)
 arch_hdrdir = /Users/sohatakeyama/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-darwin16
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
 prefix = $(DESTDIR)/Users/sohatakeyama/.rbenv/versions/2.3.1
+=======
+topdir = /Users/NIPOPO/.rbenv/versions/2.3.1/include/ruby-2.3.0
+hdrdir = $(topdir)
+arch_hdrdir = /Users/NIPOPO/.rbenv/versions/2.3.1/include/ruby-2.3.0/x86_64-darwin15
+PATH_SEPARATOR = :
+VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+prefix = $(DESTDIR)/Users/NIPOPO/.rbenv/versions/2.3.1
+>>>>>>> 6cd288fc32ded93ae407ca4afe0867fd36754286
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +40,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20170118-39440-xs45uv
 sitelibdir = $(DESTDIR)./.gem.20170118-39440-xs45uv
+=======
+sitearchdir = $(DESTDIR)./.gem.20170117-42175-1emzuyt
+sitelibdir = $(DESTDIR)./.gem.20170117-42175-1emzuyt
+>>>>>>> 6cd288fc32ded93ae407ca4afe0867fd36754286
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -83,9 +97,15 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS)  -O3 -Wno-error=shorten-64-to-32  -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
+<<<<<<< HEAD
 CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/Users/sohatakeyama/.rbenv/versions/2.3.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  = -L. -L/Users/sohatakeyama/.rbenv/versions/2.3.1/lib  -fstack-protector
+=======
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/Users/NIPOPO/.rbenv/versions/2.3.1/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
+ldflags  = -L. -L/Users/NIPOPO/.rbenv/versions/2.3.1/lib  -fstack-protector
+>>>>>>> 6cd288fc32ded93ae407ca4afe0867fd36754286
 dldflags = -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -101,7 +121,11 @@ RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
 
+<<<<<<< HEAD
 arch = x86_64-darwin16
+=======
+arch = x86_64-darwin15
+>>>>>>> 6cd288fc32ded93ae407ca4afe0867fd36754286
 sitearch = $(arch)
 ruby_version = 2.3.0
 ruby = $(bindir)/$(RUBY_BASE_NAME)
